@@ -1,0 +1,135 @@
+[
+    {
+      "serialNumber": 1,
+      "releaseDate": "2024-01-15",
+      "functionalities": "User authentication improvements",
+      "releaseTechLead": "Alice Smith",
+      "releaseOwner": "John Doe",
+      "releaseChapterLeader": "Sarah Johnson",
+      "batCoordinator": "Michael Lee",
+      "releaseMethod": "Phased",
+      "comments": "Critical for Q1 user growth"
+    },
+    {
+      "serialNumber": 2,
+      "releaseDate": "2024-02-14",
+      "functionalities": "Dashboard redesign",
+      "releaseTechLead": "Bob Brown",
+      "releaseOwner": "Jane Davis",
+      "releaseChapterLeader": "Mark Green",
+      "batCoordinator": "Emily Clark",
+      "releaseMethod": "Big Bang",
+      "comments": "Includes significant UI updates"
+    },
+    {
+      "serialNumber": 3,
+      "releaseDate": "2024-03-13",
+      "functionalities": "Improved search filters",
+      "releaseTechLead": "Carol White",
+      "releaseOwner": "Tom Harris",
+      "releaseChapterLeader": "Lisa Taylor",
+      "batCoordinator": "James Wilson",
+      "releaseMethod": "Phased",
+      "comments": "Enhancements for UX"
+    },
+    {
+      "serialNumber": 4,
+      "releaseDate": "2024-04-16",
+      "functionalities": "Real-time notifications",
+      "releaseTechLead": "David Moore",
+      "releaseOwner": "Chris Walker",
+      "releaseChapterLeader": "Jessica Adams",
+      "batCoordinator": "Samantha Martinez",
+      "releaseMethod": "Big Bang",
+      "comments": "Improves user engagement"
+    },
+    {
+      "serialNumber": 5,
+      "releaseDate": "2024-05-15",
+      "functionalities": "Performance optimizations",
+      "releaseTechLead": "Eve Thompson",
+      "releaseOwner": "Ryan Lewis",
+      "releaseChapterLeader": "Laura Hall",
+      "batCoordinator": "Gregory King",
+      "releaseMethod": "Phased",
+      "comments": "Backend and frontend optimizations"
+    },
+    {
+      "serialNumber": 6,
+      "releaseDate": "2024-06-14",
+      "functionalities": "New reporting module",
+      "releaseTechLead": "Frank Allen",
+      "releaseOwner": "Brenda Young",
+      "releaseChapterLeader": "Nancy Scott",
+      "batCoordinator": "Patricia Hill",
+      "releaseMethod": "Phased",
+      "comments": "Enables in-depth analytics"
+    },
+    {
+      "serialNumber": 7,
+      "releaseDate": "2024-07-17",
+      "functionalities": "User role management",
+      "releaseTechLead": "Grace Wright",
+      "releaseOwner": "Kyle Baker",
+      "releaseChapterLeader": "Aaron Harris",
+      "batCoordinator": "Rachel Campbell",
+      "releaseMethod": "Big Bang",
+      "comments": "Improves user access control"
+    },
+    {
+      "serialNumber": 8,
+      "releaseDate": "2024-08-15",
+      "functionalities": "Enhanced data export options",
+      "releaseTechLead": "Henry Edwards",
+      "releaseOwner": "Michelle Perez",
+      "releaseChapterLeader": "Olivia Turner",
+      "batCoordinator": "Sophia Parker",
+      "releaseMethod": "Phased",
+      "comments": "Provides CSV and JSON export"
+    },
+    {
+      "serialNumber": 9,
+      "releaseDate": "2024-09-13",
+      "functionalities": "Mobile app optimizations",
+      "releaseTechLead": "Isabella Collins",
+      "releaseOwner": "Robert Cox",
+      "releaseChapterLeader": "Donna Ramirez",
+      "batCoordinator": "Gary Richardson",
+      "releaseMethod": "Big Bang",
+      "comments": "Improves app performance on iOS"
+    },
+    {
+      "serialNumber": 10,
+      "releaseDate": "2024-10-16",
+      "functionalities": "New feedback module",
+      "releaseTechLead": "Jack Ward",
+      "releaseOwner": "Vanessa Rogers",
+      "releaseChapterLeader": "Chad Bell",
+      "batCoordinator": "Anna Sanders",
+      "releaseMethod": "Phased",
+      "comments": "Collects user feedback in-app"
+    },
+    {
+      "serialNumber": 11,
+      "releaseDate": "2024-11-14",
+      "functionalities": "Integration with CRM",
+      "releaseTechLead": "Karen Torres",
+      "releaseOwner": "Matthew Nelson",
+      "releaseChapterLeader": "Judy Peterson",
+      "batCoordinator": "Jordan Sanchez",
+      "releaseMethod": "Big Bang",
+      "comments": "Syncs data with CRM"
+    },
+    {
+      "serialNumber": 12,
+      "releaseDate": "2024-12-16",
+      "functionalities": "Year-end security updates",
+      "releaseTechLead": "Leo Jenkins",
+      "releaseOwner": "Tina Morales",
+      "releaseChapterLeader": "Victor Gray",
+      "batCoordinator": "Teresa Hughes",
+      "releaseMethod": "Phased",
+      "comments": "Critical security patches"
+    }
+  ]
+  

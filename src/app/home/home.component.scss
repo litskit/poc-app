@@ -1,0 +1,88 @@
+.dashboard {
+    min-height: 100vh;
+    background-color: var(--surface-ground);
+  
+    &.dark-theme {
+      --surface-ground: var(--gray-900);
+      --surface-card: var(--gray-800);
+      --surface-border: var(--gray-700);
+      --text-color: var(--gray-100);
+    }
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  
+    h1 {
+      margin: 0;
+      color: var(--text-color);
+    }
+  }
+  
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .stat-card {
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+  
+      h3 {
+        margin: 0;
+        font-size: 1rem;
+        color: var(--text-color);
+      }
+    }
+  
+    .stat-content {
+      display: flex;
+      flex-direction: column;
+  
+      .stat-value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--text-color);
+      }
+  
+      .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-secondary-color);
+      }
+    }
+  }
+  
+  .progress-container {
+    .team-progress {
+      margin-bottom: 1rem;
+  
+      .progress-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+      }
+    }
+  }
+  
+  .quick-action-button {
+    width: 100%;
+    justify-content: start;
+  
+    .p-button-label {
+      margin-left: 0.5rem;
+    }
+  }
+  
+  // Responsive adjustments
+  @media screen and (max-width: 768px) {
+    .content-container {
+      padding: 0.5rem;
+    }
+  }

@@ -1,0 +1,46 @@
+<div class="release-calendar">
+
+    <div class="calendar-header">
+      <h2>Release Calendar</h2>
+    </div>
+    
+    <div *ngIf="releaseData; else noData" class="release-table">
+        <p-table [value]="releaseData">
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="serialNumber">Link </th>
+              <th pSortableColumn="releaseDate">Release Date <p-sortIcon field="releaseDate"></p-sortIcon></th>
+              <th pSortableColumn="functionalities">Functionalities <p-sortIcon field="functionalities"></p-sortIcon></th>
+              <th pSortableColumn="releaseTechLead">Release Tech Lead <p-sortIcon field="releaseTechLead"></p-sortIcon></th>
+              <th pSortableColumn="releaseOwner">Release Owner <p-sortIcon field="releaseOwner"></p-sortIcon></th>
+              <th pSortableColumn="releaseChapterLeader">Release Chapter Leader <p-sortIcon field="releaseChapterLeader"></p-sortIcon></th>
+              <th pSortableColumn="batCoordinator">BAT Coordinator <p-sortIcon field="batCoordinator"></p-sortIcon></th>
+              <th pSortableColumn="releaseMethod">Release Method <p-sortIcon field="releaseMethod"></p-sortIcon></th>
+              <th pSortableColumn="comments">Comments <p-sortIcon field="comments"></p-sortIcon></th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr>
+              <td><a href=""><i class="pi pi-link"></i></a></td>
+              <td>{{ item.releaseDate | date: 'yyyy-MM-dd' }}</td>
+              <td>{{ item.functionalities }}</td>
+              <td>{{ item.releaseTechLead }}</td>
+              <td>{{ item.releaseOwner }}</td>
+              <td>{{ item.releaseChapterLeader }}</td>
+              <td>{{ item.batCoordinator }}</td>
+              <td>{{ item.releaseMethod }}</td>
+              <td>{{ item.comments }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      
+      <ng-template #noData>
+        <p>No data available.</p>
+      </ng-template>
+      
+      
+      
+      
+  </div>
+  

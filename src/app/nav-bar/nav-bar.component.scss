@@ -1,42 +1,62 @@
-/* Navbar container */
-.navbar {
+.nav-bar{
     display: flex;
-    justify-content: space-between; /* Positions logo and links on opposite sides */
-    align-items: center;
-    background-color: #333;
-    padding: 0.5rem 1rem;
-    color: white;
-  }
-  
-  /* Left: Logo */
-  .navbar-logo {
-    .logo-link {
-      color: white;
-      font-size: 1.2rem;
-      text-decoration: none;
-    }
-  }
-  
-  /* Right: Navigation Links */
-  .navbar-links {
-    ul {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      gap: 2rem; /* Space between links */
-  
-      li {
-        a {
-          color: white;
-          text-decoration: none;
-          font-size: 1rem;
-  
-          &:hover {
-            color: #ddd; /* Hover effect */
-          }
+}
+
+p-toolbar {
+    justify-content: space-between; // eAligns items to the left and right
+    padding: 0.5rem 1rem; // Adds padding around the toolbar
+    background-color: #006044; // Light background color for the toolbar
+    border-bottom: 1px solid #dee2e6; // Optional: adds a bottom border
+    width: 100%; // Make sure the toolbar takes the full width
+    box-sizing: border-box; // Include padding and border in the element's total width
+
+    .toolbar-left {
+        display: flex; // Ensures left section aligns its children properly
+
+        .logo {
+            // Styles for the logo section
+            .logo-link {
+                font-size: 1.5rem; // Adjust logo font size
+                color: #343a40; // Logo color
+                text-decoration: none; // Removes underline
+
+                &:hover {
+                    color: #76A923; // Optional: hover color for the logo
+                }
+            }
         }
-      }
     }
-  }
-  
+
+    .toolbar-right {
+        margin-left: auto; // Pushes the right section to the far right
+
+        .navbar-links {
+            display: flex; // Aligns navbar links in a row
+            list-style-type: none; // Removes bullet points
+            margin: 0; // Removes default margin
+            padding: 0; // Removes default padding
+
+            li {
+                margin-left: 1rem; // Adds space between navbar links
+
+                a {
+                    display: flex; // Makes the link a flex container
+                    align-items: center; // Centers icon and text vertically
+                    text-decoration: none; // Removes underline
+                    color: #343a40; // Link color
+                    padding: 0.5rem; // Adds padding around the link
+                    transition: background-color 0.3s; // Smooth background transition
+
+                    &:hover {
+                        background-color: #e9ecef; // Changes background on hover
+                        border-radius: 4px; // Optional: adds rounded corners on hover
+                    }
+
+                    i {
+                        margin-right: 0.5rem; // Space between icon and text
+                    }
+                }
+            }
+        }
+    }
+}

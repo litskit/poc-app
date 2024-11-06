@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ReleaseCalendarComponent } from './release-calendar/release-calendar.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/install-calendar', pathMatch: 'full' } // Default route
+  { path: '', component: HomeComponent },
+  { path: 'release-calendar', component: ReleaseCalendarComponent } // Default route
 ];
 
 @NgModule({

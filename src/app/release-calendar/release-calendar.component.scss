@@ -1,0 +1,84 @@
+.release-calendar {
+  margin: 1rem auto;
+  padding: 1rem;
+  
+
+  .release-table {
+    border: 1px solid #ccc;
+    /* Add a border around the table */
+    border-radius: 8px;
+    /* Optional: Adds rounded corners */
+    overflow: hidden;
+    /* Optional: Ensures borders don't get cut off in case of rounded corners */
+
+  }
+
+
+  .calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;    /* Center vertically */
+    margin: 1rem auto;    /* Center the header in the parent container */
+    padding: 1rem;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .release-table {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+    border-radius: 8px; /* Rounded corners for the table */
+  }
+
+}
+
+
+p-table {
+  width: 100%;
+  border-spacing: 0; /* Remove default spacing */
+}
+
+p-table th, p-table td {
+  padding: 15px 20px; /* Adequate padding for cells */
+  text-align: left; /* Align text to the left */
+  vertical-align: middle;
+  font-size: 14px;
+  color: #343a40; /* Dark text for good contrast */
+}
+
+p-table th {
+  background-color: #af8a49; /* Blue background for table headers */
+  color: white; /* White text on header */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase headers for style */
+  letter-spacing: 1px; /* Spacing between header letters */
+}
+
+p-table tr:hover td {
+  background-color: #f1f1f1; /* Light background when hovering over rows */
+}
+
+p-table tr:nth-child(even) td {
+  background-color: #fafafa; /* Slight gray for even rows to improve readability */
+}
+
+p-table tr:nth-child(odd) td {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+
+p-table tr:hover td {
+  background-color: #e9ecef; /* Subtle hover effect for better interactivity */
+}
+
+
+/* Additional enhancements */
+button {
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

@@ -1,0 +1,115 @@
+<div class="dashboard" [ngClass]="{'dark-theme': isDarkMode}">
+    <!-- Header -->
+    <p-toolbar>
+      <div class="p-toolbar-group-left">
+        <div class="logo-container">
+          <i class="pi pi-chart-bar text-primary text-2xl"></i>
+          <h1 class="text-2xl font-bold ml-2">Agile Delivery Hub</h1>
+        </div>
+      </div>
+      <div class="p-toolbar-group-right">
+        <p-button icon="pi pi-bell" styleClass="p-button-text"></p-button>
+        <p-button 
+          [icon]="isDarkMode ? 'pi pi-sun' : 'pi pi-moon'" 
+          styleClass="p-button-text"
+          (onClick)="toggleTheme()">
+        </p-button>
+        <p-avatar label="JD" styleClass="ml-2" shape="circle"></p-avatar>
+      </div>
+    </p-toolbar>
+  
+    <!-- Main Content -->
+    <div class="content-container p-4">
+      <!-- Quick Stats -->
+      <div class="grid">
+        <div class="col-12 md:col-4">
+          <p-card>
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Active Sprints</h3>
+                <i class="pi pi-calendar text-primary"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Across 12 teams</span>
+              </div>
+            </div>
+          </p-card>
+        </div>
+  
+        <div class="col-12 md:col-4">
+          <p-card>
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Team Members</h3>
+                <i class="pi pi-users text-primary"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-value">96</span>
+                <span class="stat-label">12 Scrum Teams</span>
+              </div>
+            </div>
+          </p-card>
+        </div>
+  
+        <div class="col-12 md:col-4">
+          <p-card>
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Deliverables</h3>
+                <i class="pi pi-box text-primary"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-value">45</span>
+                <span class="stat-label">This Quarter</span>
+              </div>
+            </div>
+          </p-card>
+        </div>
+      </div>
+  
+      <!-- Charts Section -->
+      <div class="grid mt-4">
+        <div class="col-12 md:col-6">
+          <p-card header="Team Velocity">
+            <p-chart type="bar" 
+              [data]="velocityChartData" 
+              [options]="velocityChartOptions"
+              [style]="{'height': '300px'}">
+            </p-chart>
+          </p-card>
+        </div>
+  
+        <div class="col-12 md:col-6">
+          <p-card header="Sprint Progress">
+            <div class="progress-container">
+              <div *ngFor="let team of teamProgress" class="team-progress">
+                <div class="progress-header">
+                  <span>{{team.team}}</span>
+                  <span>{{team.progress}}%</span>
+                </div>
+                <p-progressBar 
+                  [value]="team.progress"
+                  [showValue]="false"
+                  styleClass="mb-3">
+                </p-progressBar>
+              </div>
+            </div>
+          </p-card>
+        </div>
+      </div>
+  
+      <!-- Quick Actions -->
+      <p-card header="Quick Actions" styleClass="mt-4">
+        <div class="grid">
+          <div *ngFor="let action of quickActions" class="col-6 md:col-3">
+            <p-button 
+              [label]="action.label"
+              [icon]="action.icon"
+              styleClass="p-button-outlined quick-action-button">
+            </p-button>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>

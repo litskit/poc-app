@@ -1,17 +1,18 @@
-<nav class="navbar">
-    <!-- Left: Logo -->
-    <div class="navbar-logo">
-      <a href="/" class="logo-link">YourLogo</a>
-    </div>
-  
-    <!-- Right: Navigation Links -->
-    <div class="navbar-links">
-      <ul>
-        <li><a routerLink="/install-calendar">Install Calendar</a></li>
-        <li><a routerLink="/teams">Teams</a></li>
-        <li><a routerLink="/applications">Applications</a></li>
-        <li><a routerLink="/profile">Profile</a></li>
-      </ul>
-    </div>
-  </nav>
-  
+<div class="nav-bar">
+    <p-toolbar>
+        <div class="toolbar-left">
+            <div class="logo">
+                <a href="/" class="logo-link">YourLogo</a>
+            </div>
+        </div>
+
+        <div class="toolbar-right">
+            <ul class="navbar-links">
+                <li><a routerLink="/release-calendar"><i class="pi pi-calendar"></i> Releases </a></li>
+                <li><a routerLink="/teams"><i class="pi pi-users"></i> Teams</a></li>
+                <li><a routerLink="/applications"><i class="pi pi-database"></i> Applications</a></li>
+                <li><a routerLink="/profile"><i class="pi pi-user"></i> Profile</a></li>
+            </ul>
+        </div>
+    </p-toolbar>
+</div>
