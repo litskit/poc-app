@@ -8,10 +8,42 @@
 
         <div class="toolbar-right">
             <ul class="navbar-links">
-                <li><a routerLink="/release-calendar"><i class="pi pi-calendar"></i> Releases </a></li>
-                <li><a routerLink="/teams"><i class="pi pi-users"></i> Teams</a></li>
-                <li><a routerLink="/applications"><i class="pi pi-database"></i> Applications</a></li>
-                <li><a routerLink="/profile"><i class="pi pi-user"></i> Profile</a></li>
+                <li class="dropdown">
+                    <a routerLink="/release-calendar"><i class="pi pi-calendar"></i> Releases </a>
+                    <ul class="dropdown-content">
+                        <li><a routerLink="/release-calendar">Release Calendar</a></li>
+                        <li><a routerLink="/business-value">Business Value</a></li>
+                        <li><a routerLink="/install-plan">Install Plan</a></li>
+                        <li><a routerLink="/install-checklist">Install Checklist</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a routerLink="/teams"><i class="pi pi-users"></i> Teams</a>
+                    <ul class="dropdown-content">
+                        <li><a routerLink="/team-overview">Team Overview</a></li>
+                        <li><a routerLink="/team-members">Team Members</a></li>
+                        <li><a routerLink="/team-projects">Projects</a></li>
+                        <li><a routerLink="/team-calendar">Team Calendar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a routerLink="/applications"><i class="pi pi-database"></i> Applications</a>
+                    <ul class="dropdown-content">
+                        <li><a routerLink="/app-list">App List</a></li>
+                        <li><a routerLink="/app-metrics">App Metrics</a></li>
+                        <li><a routerLink="/app-dependencies">Dependencies</a></li>
+                        <li><a routerLink="/app-monitoring">Monitoring</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a routerLink="/profile"><i class="pi pi-user"></i> Profile</a>
+                    <ul class="dropdown-content">
+                        <li><a routerLink="/user-settings">Settings</a></li>
+                        <li><a routerLink="/preferences">Preferences</a></li>
+                        <li><a routerLink="/notifications">Notifications</a></li>
+                        <li><a routerLink="/logout">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </p-toolbar>

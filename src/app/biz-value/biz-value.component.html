@@ -1,0 +1,125 @@
+<!-- business-value.component.html -->
+<div class="business-value-container">
+  <div class="header">
+    <h1>Business Value</h1>
+    <div class="actions">
+      <p-button label="Add Business Value" icon="pi pi-plus" (onClick)="openAddDialog()"></p-button>
+      <p-button label="Toggle View" icon="pi pi-sync" (onClick)="toggleView()" class="ml-2"></p-button>
+    </div>
+  </div>
+
+  <!-- Table View -->
+  <div *ngIf="viewMode === 'table'" class="table-view">
+    <p-table [value]="businessValues" [paginator]="true" [rows]="10"
+             [globalFilterFields]="['initiativeName', 'applicationName', 'ownerTeam']">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Initiative Name</th>
+          <th>Application</th>
+          <th>Expected Value</th>
+          <th>Value Type</th>
+          <th>Timeline</th>
+          <th>Status</th>
+          <th>Owner Team</th>
+          <th>Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-value>
+        <tr>
+          <td>{{value.initiativeName}}</td>
+          <td>{{value.applicationName}}</td>
+          <td>{{value.expectedValue | currency}}</td>
+          <td>{{value.valueType}}</td>
+          <td>{{value.startDate | date}} - {{value.endDate | date}}</td>
+          <td>
+            <p-tag [severity]="getStatusSeverity(value.status)" [value]="value.status"></p-tag>
+          </td>
+          <td>{{value.ownerTeam}}</td>
+          <td>
+            <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text"></button>
+            <button pButton icon="pi pi-eye" class="p-button-rounded p-button-text"></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <!-- Yearly View -->
+  <div *ngIf="viewMode === 'yearly'" class="yearly-view">
+    <div class="quarters-container">
+      <div *ngFor="let quarter of ['Q1', 'Q2', 'Q3', 'Q4']" class="quarter-section">
+        <h3>{{quarter}}</h3>
+        <div class="initiatives-list">
+          <p-card *ngFor="let value of getInitiativesByQuarter(quarter)" 
+                  [header]="value.initiativeName"
+                  class="mb-2">
+            <p>{{value.description}}</p>
+            <p><strong>Value:</strong> {{value.expectedValue | currency}}</p>
+            <p><strong>Team:</strong> {{value.ownerTeam}}</p>
+          </p-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Business Value Dialog -->
+  <p-dialog [(visible)]="showAddDialog" 
+            header="Add New Business Value Initiative" 
+            [modal]="true" 
+            [style]="{width: '50vw'}">
+    <form [formGroup]="businessValueForm" (ngSubmit)="submitBusinessValue()">
+      <div class="grid">
+        <div class="col-12">
+          <label for="initiativeName">Initiative Name</label>
+          <input id="initiativeName" type="text" pInputText formControlName="initiativeName" class="w-full">
+        </div>
+        
+        <div class="col-12">
+          <label for="description">Description</label>
+          <textarea id="description" pInputTextarea formControlName="description" class="w-full"></textarea>
+        </div>
+
+        <div class="col-6">
+          <label for="applicationName">Application</label>
+          <input id="applicationName" type="text" pInputText formControlName="applicationName" class="w-full">
+        </div>
+
+        <div class="col-6">
+          <label for="expectedValue">Expected Value</label>
+          <p-inputNumber id="expectedValue" formControlName="expectedValue" mode="currency" currency="USD" class="w-full"></p-inputNumber>
+        </div>
+
+        <div class="col-6">
+          <label for="valueType">Value Type</label>
+          <p-dropdown id="valueType" formControlName="valueType" 
+                     [options]="['Revenue', 'Cost Savings', 'Customer Satisfaction', 'Efficiency']"
+                     class="w-full"></p-dropdown>
+        </div>
+
+        <div class="col-6">
+          <label for="ownerTeam">Owner Team</label>
+          <input id="ownerTeam" type="text" pInputText formControlName="ownerTeam" class="w-full">
+        </div>
+
+        <div class="col-6">
+          <label for="startDate">Start Date</label>
+          <p-calendar id="startDate" formControlName="startDate" class="w-full"></p-calendar>
+        </div>
+
+        <div class="col-6">
+          <label for="endDate">End Date</label>
+          <p-calendar id="endDate" formControlName="endDate" class="w-full"></p-calendar>
+        </div>
+
+        <div class="col-12">
+          <label for="risks">Risks (comma-separated)</label>
+          <textarea id="risks" pInputTextarea formControlName="risks" class="w-full"></textarea>
+        </div>
+      </div>
+    </form>
+    <ng-template pTemplate="footer">
+      <button pButton label="Cancel" icon="pi pi-times" (click)="showAddDialog = false" class="p-button-text"></button>
+      <button pButton label="Submit" icon="pi pi-check" (click)="submitBusinessValue()"></button>
+    </ng-template>
+  </p-dialog>
+</div>

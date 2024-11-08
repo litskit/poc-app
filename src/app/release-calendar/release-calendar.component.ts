@@ -20,6 +20,7 @@ export class ReleaseCalendarComponent implements OnInit {
   ngOnInit(): void {
     this.releaseService.getReleaseData().subscribe(data => {
       this.releaseData = data;
+      console.log(this.releaseData)
     });
   }
 }

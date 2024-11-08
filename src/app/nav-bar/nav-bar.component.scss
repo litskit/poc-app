@@ -9,6 +9,7 @@ p-toolbar {
     border-bottom: 1px solid #dee2e6; // Optional: adds a bottom border
     width: 100%; // Make sure the toolbar takes the full width
     box-sizing: border-box; // Include padding and border in the element's total width
+    z-index: 100;
 
     .toolbar-left {
         display: flex; // Ensures left section aligns its children properly
@@ -32,20 +33,20 @@ p-toolbar {
 
         .navbar-links {
             display: flex; // Aligns navbar links in a row
-            list-style-type: none; // Removes bullet points
+            list-style: none; // Removes bullet points
             margin: 0; // Removes default margin
             padding: 0; // Removes default padding
+            align-items: center;
 
             li {
-                margin-left: 1rem; // Adds space between navbar links
+                position: relative;
+                margin: 0 10px;
 
                 a {
-                    display: flex; // Makes the link a flex container
-                    align-items: center; // Centers icon and text vertically
-                    text-decoration: none; // Removes underline
-                    color: #343a40; // Link color
-                    padding: 0.5rem; // Adds padding around the link
-                    transition: background-color 0.3s; // Smooth background transition
+                    text-decoration: none;
+                    color: #333;
+                    padding: 10px;
+                    display: block;
 
                     &:hover {
                         background-color: #e9ecef; // Changes background on hover
@@ -60,3 +61,53 @@ p-toolbar {
         }
     }
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 8px 0;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    padding: 8px 16px;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Animation for smooth appearance */
+.dropdown-content {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+// /* Add arrow indicator for dropdowns */
+// .dropdown > a::after {
+//     content: '▼';
+//     font-size: 0.8em;
+//     margin-left: 5px;
+//     display: inline-block;
+// }

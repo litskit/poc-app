@@ -1,0 +1,89 @@
+[
+    {
+      "id": "bv12345",
+      "initiativeName": "Customer Experience Enhancement",
+      "description": "This initiative focuses on improving the user experience by optimizing the customer support process and interface.",
+      "applicationName": "SupportPortal",
+      "expectedValue": 500000,
+      "valueType": "Customer Satisfaction",
+      "startDate": "2024-01-01T00:00:00Z",
+      "endDate": "2024-12-31T23:59:59Z",
+      "status": "In Progress",
+      "ownerTeam": "Customer Support",
+      "quarterPlanned": "Q1 2024",
+      "risks": [
+        "Delayed implementation of support system updates",
+        "Potential increase in customer support volume",
+        "Integration challenges with legacy systems"
+      ]
+    },
+    {
+      "id": "bv67890",
+      "initiativeName": "Cloud Infrastructure Optimization",
+      "description": "Optimizing cloud resources to reduce operational costs and improve system reliability.",
+      "applicationName": "CloudManager",
+      "expectedValue": 300000,
+      "valueType": "Cost Savings",
+      "startDate": "2024-04-01T00:00:00Z",
+      "endDate": "2024-09-30T23:59:59Z",
+      "status": "Planned",
+      "ownerTeam": "Infrastructure Team",
+      "quarterPlanned": "Q2 2024",
+      "risks": [
+        "Possible downtime during migration",
+        "Unforeseen increase in cloud provider fees"
+      ]
+    },
+    {
+      "id": "bv11223",
+      "initiativeName": "Sales Automation System",
+      "description": "Implementing a sales automation tool to increase sales team productivity and reduce manual efforts.",
+      "applicationName": "SalesForceAutomation",
+      "expectedValue": 750000,
+      "valueType": "Efficiency",
+      "startDate": "2024-03-01T00:00:00Z",
+      "endDate": "2024-12-01T23:59:59Z",
+      "status": "In Progress",
+      "ownerTeam": "Sales Operations",
+      "quarterPlanned": "Q1 2024",
+      "risks": [
+        "User adoption challenges",
+        "Integration issues with CRM systems"
+      ]
+    },
+    {
+      "id": "bv99887",
+      "initiativeName": "New Product Launch",
+      "description": "Launching a new product to expand market share and increase revenue streams.",
+      "applicationName": "ProductLaunchApp",
+      "expectedValue": 2000000,
+      "valueType": "Revenue",
+      "startDate": "2024-06-01T00:00:00Z",
+      "endDate": "2024-11-30T23:59:59Z",
+      "status": "Planned",
+      "ownerTeam": "Marketing & Product Team",
+      "quarterPlanned": "Q2 2024",
+      "risks": [
+        "Market competition",
+        "Delay in product development"
+      ]
+    },
+    {
+      "id": "bv44556",
+      "initiativeName": "Employee Training Program",
+      "description": "A training initiative aimed at improving employee skills, satisfaction, and retention.",
+      "applicationName": "TrainingPortal",
+      "expectedValue": 200000,
+      "valueType": "Customer Satisfaction",
+      "startDate": "2024-02-01T00:00:00Z",
+      "endDate": "2024-06-30T23:59:59Z",
+      "status": "Completed",
+      "ownerTeam": "HR Department",
+      "quarterPlanned": "Q1 2024",
+      "risks": [
+        "Scheduling conflicts with key employees",
+        "Low participation rates"
+      ]
+    }
+  ]
+  
